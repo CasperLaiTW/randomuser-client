@@ -82,6 +82,9 @@ class Generator {
 			->setCity($encUser['location']['city'])
 			->setState($encUser['location']['state'])
 			->setZip($encUser['location']['postcode'])
+			->setCountry($encUser['location']['country'])
+			->setLatitude($encUser['location']['coordinates']['latitude'])
+			->setLongitude($encUser['location']['coordinates']['longitude'])
 
 			->setUsername($encUser['login']['username'])
 			->setPassword($encUser['login']['password'])
@@ -94,7 +97,8 @@ class Generator {
 			->setDateOfBirth($encUser['dob'])
 			->setPhone($encUser['phone'])
 			->setCell($encUser['cell'])
-			->setPicture($encUser['picture']['medium']);
+			->setPicture($encUser['picture']['medium'])
+			->setLargePicture($encUser['picture']['large']);
 
 		return $user;
 	}

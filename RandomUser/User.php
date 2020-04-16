@@ -28,6 +28,10 @@ class User {
 	private $cell;
 	private $SSN;
 	private $picture;
+	private $country;
+	private $latitude;
+	private $longitude;
+	private $largePicture;
 
 	public function getGender() {
 		return $this->gender;
@@ -91,6 +95,18 @@ class User {
 	}
 	public function getPicture() {
 		return $this->picture;
+	}
+	public function getCountry() {
+		return $this->country;
+	}
+	public function getLatitude() {
+		return $this->latitude;
+	}
+	public function getLongitude() {
+		return $this->longitude;
+	}
+	public function getLargePicture() {
+		return $this->largePicture;
 	}
 
 	// Setters -----------
@@ -175,5 +191,20 @@ class User {
 		$this->picture = $picture;
 		return $this;
 	}
-
+	public function setCountry($country) {
+		$this->country = $country;
+		return $this;
+	}
+	public function setLatitude($latitude) {
+		$this->latitude = $latitude;
+		return $this;
+	}
+	public function setLongitude($longitude) {
+		$this->longitude = $longitude;
+		return $this;
+	}
+	public function setLargePicture($largePicture) {
+		$this->largePicture = $largePicture;
+		return $this;
+	}
 }
